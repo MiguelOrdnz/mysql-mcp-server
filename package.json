@@ -1,0 +1,40 @@
+{
+  "name": "mysql-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An MCP server (Model Context Protocol) that connects to MySQL databases, enabling AI tools and agents to query your DB safely.",
+  "main": "dist/index.js",
+  "bin": {
+    "mysql-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "mysql",
+    "model-context-protocol",
+    "database",
+    "ai"
+  ],
+  "author": "Miguel Ordonez",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "mysql2": "^3.20.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.1"
+  }
+}
